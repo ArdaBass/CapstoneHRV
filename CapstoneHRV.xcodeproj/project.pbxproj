@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2E8F30B02D86F5CA002EE47D /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 2E8F30AF2D86F5CA002EE47D /* Zip */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2EE3D0A22D77662A002E0CE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8F30B02D86F5CA002EE47D /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = CapstoneHRV;
 			packageProductDependencies = (
+				2E8F30AF2D86F5CA002EE47D /* Zip */,
 			);
 			productName = Data;
 			productReference = 2EE3D0912D776629002E0CE5 /* CapstoneHRV.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 2EE3D0882D776629002E0CE5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2E8F30AE2D86F56F002EE47D /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2EE3D0922D776629002E0CE5 /* Products */;
 			projectDirPath = "";
@@ -425,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = project.Data;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -458,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = project.Data;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -575,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E8F30AE2D86F56F002EE47D /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E8F30AF2D86F5CA002EE47D /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E8F30AE2D86F56F002EE47D /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2EE3D0892D776629002E0CE5 /* Project object */;
 }

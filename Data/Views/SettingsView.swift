@@ -5,6 +5,11 @@ struct SettingsView: View {
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
 
     let colors: [String] = ["Blue", "Green", "Red", "Purple"]
+    
+    // ✅ Fetch the app version from Info.plist
+    private var appVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown"
+    }
 
     var body: some View {
         NavigationView {
@@ -27,14 +32,14 @@ struct SettingsView: View {
                     HStack {
                         Text("Version")
                         Spacer()
-                        Text("1.0.0")
+                        Text(appVersion) // ✅ Dynamically fetch the version
                             .foregroundColor(.gray)
                     }
 
                     HStack {
                         Text("Developer")
                         Spacer()
-                        Text("Your Name")
+                        Text("Arda")
                             .foregroundColor(.gray)
                     }
                 }

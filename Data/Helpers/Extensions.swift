@@ -23,10 +23,3 @@ extension Button {
     }
 }
 
-// ✅ Keep formatDate function (it's unrelated to button styles)
-func formatDate(_ date: Date) -> String {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter.string(from: date)
-}

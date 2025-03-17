@@ -14,11 +14,13 @@ func detectPeaks(in data: [(time: Double, voltage: Double)]) -> [Double] {
     return peaks
 }
 
-func createMockECGSamples() -> [MockECGSample] {
+func createMockECGSamples() -> [ECGSample] {
     return [
-        MockECGSample(id: UUID(), startDate: Date().addingTimeInterval(-3600), duration: 30.0)
+        ECGSample(id: UUID(), startDate: Date().addingTimeInterval(-3600), duration: 30.0),
+        ECGSample(id: UUID(), startDate: Date().addingTimeInterval(-7200), duration: 30.0)
     ]
 }
+
 
 func createMockECGData() -> [(time: Double, voltage: Double)] {
     let samplingRate = 512.0 // ✅ 512 samples per second (realistic ECG rate)
